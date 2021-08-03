@@ -18,16 +18,15 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class Comandos extends ListenerAdapter{
 	
-	public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
+	public void onGuildMessageReceived(GuildMessageReceivedEvent event){
 		
 		//System.out.println("Mensaje detectado: " + event.getMessage().getContentRaw());
-		try {
-			if(event.getMessage().getContentRaw().length() > 0 && event.getMessage().getContentRaw().charAt(0) == '*') {
+		try{
+			if(event.getMessage().getContentRaw().length() > 0 && event.getMessage().getContentRaw().charAt(0) == '*'){
 				
 				String comando = event.getMessage().getContentRaw();
 				System.out.println("Comando detectado: " + comando.split(" ")[0]);
 				//System.out.println("El comando " + comando + "tiene " + event.getMessage().getContentRaw().length() + " caracteres");
-				
 				
 				switch (comando.split(" ")[0]) {
 				case "*info":
@@ -49,11 +48,10 @@ public class Comandos extends ListenerAdapter{
 				}	
 			}
 			
-		}catch (Exception e) {
+		}catch (Exception e){
 			System.err.println("Error al procesar comando: " + event.getMessage().getContentRaw());
 			e.printStackTrace();
 		}
-		
 	}
 	
 	
@@ -114,13 +112,15 @@ public class Comandos extends ListenerAdapter{
 				" metiéndole los dedos en los ojos.",
 				" de una patada voladora.",
 				" a puñetazo limpio.",
-				" con un hacha."
+				" con un hacha.",
+				" dándole con el manifiesto comunista en la crisma."
 				};
 		Random rand = new Random();
 		
 		while(jugadores.size() > 1) {
 			Collections.shuffle(jugadores);
-			event.getChannel().sendMessage(jugadores.get(0).getAsMention() + " ha asesinado a " + jugadores.get(1).getAsMention() + muertes[rand.nextInt(muertes.length)]).queue();			jugadores.remove(jugadores.get(1));
+			event.getChannel().sendMessage(jugadores.get(0).getAsMention() + " ha asesinado a " + jugadores.get(1).getAsMention() + muertes[rand.nextInt(muertes.length)]).queue();			
+			//jugadores.remove(jugadores.get(1));
 		}
 		event.getChannel().sendMessage("El ganador es: " + jugadores.get(0).getAsMention()).queue();
 	}

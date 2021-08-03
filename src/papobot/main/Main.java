@@ -11,7 +11,7 @@ import net.dv8tion.jda.api.entities.Activity.ActivityType;
 public class Main {
 	
 	public static JDA jda;
-	public static String token = "ODcxODUxNjUzNjQ3NzI4Njcy.YQhVIA.8WSTFnDrTt4HphfBHlMmxjQv3p0";
+	public static String token = "ODcxODUxNjUzNjQ3NzI4Njcy.YQhVIA.zOuDOBeUf9Y__caYcXC3htOj6ZU";
 
 	public static void main(String[] args) throws LoginException {
 
@@ -20,5 +20,4 @@ public class Main {
 		jda.getPresence().setActivity(Activity.of(ActivityType.LISTENING, "a la madre de Alejandro gemir"));
 		jda.addEventListener(new Comandos());
 	}
-
 }
