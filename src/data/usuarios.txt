@@ -1,0 +1,4 @@
+nombre:bei#monedas:50#horaclaim:2021-08-03T17:37
+nombre:YVNG TITI#monedas:50#horaclaim:2021-08-03T18:09:51.866064800
+nombre:Ger#monedas:1#horaclaim:2021-08-03T18:38
+nombre:alexita#monedas:50#horaclaim:2021-08-03T17:38:58.559303900
