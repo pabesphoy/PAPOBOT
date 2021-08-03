@@ -115,7 +115,8 @@ public class Comandos extends ListenerAdapter{
 				" con un hacha.",
 				" dándole con el manifiesto comunista en la crisma.",
 				" meándole en el ojo.",
-				" golpeándole con la cabeza de Pablo."
+				" golpeándole con la cabeza de Pablo.",
+				" obligándole a ver videos de DalasReview."
 				};
 		Random rand = new Random();
 		
