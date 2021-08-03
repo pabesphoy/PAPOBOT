@@ -113,6 +113,7 @@ public class Comandos extends ListenerAdapter{
 				" de una patada voladora.",
 				" a puñetazo limpio.",
 				" con un hacha.",
+				" meándole en el ojo",
 				" dándole con el manifiesto comunista en la crisma."
 				};
 		Random rand = new Random();
