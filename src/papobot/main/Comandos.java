@@ -59,7 +59,7 @@ public class Comandos extends ListenerAdapter{
 	private void ejecutarBet(GuildMessageReceivedEvent event) throws IOException {
 		Integer dineroApostado = Integer.valueOf(event.getMessage().getContentRaw().split(" ")[1]);
 		Fila fila = BaseDeDatos.getFilaByNombre(event.getAuthor().getName());
-		if(dineroApostado < fila.getMonedas()) {
+		if(dineroApostado <= fila.getMonedas()) {
 			Integer multiplicador = new Random().nextInt(201);
 			Integer dineroDevuelto = (int) Math.round(dineroApostado*(multiplicador/100.0));
 			System.out.println(String.format("dinero devuleto = apostado*(mult/100) || %d = %d * (%d/100)",dineroDevuelto,dineroApostado,multiplicador));
@@ -114,14 +114,16 @@ public class Comandos extends ListenerAdapter{
 				" a puñetazo limpio.",
 				" con un hacha.",
 				" meándole en el puto ojo",
-				" dándole con el manifiesto comunista en la crisma."
+				" dándole con el manifiesto comunista en la crisma.",
+				" meándole en el ojo.",
+				" golpeándole con la cabeza de Pablo."
 				};
 		Random rand = new Random();
 		
 		while(jugadores.size() > 1) {
 			Collections.shuffle(jugadores);
 			event.getChannel().sendMessage(jugadores.get(0).getAsMention() + " ha asesinado a " + jugadores.get(1).getAsMention() + muertes[rand.nextInt(muertes.length)]).queue();			
-			//jugadores.remove(jugadores.get(1));
+			jugadores.remove(jugadores.get(1));
 		}
 		event.getChannel().sendMessage("El ganador es: " + jugadores.get(0).getAsMention()).queue();
 	}
