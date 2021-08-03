@@ -11,7 +11,7 @@ import net.dv8tion.jda.api.entities.Activity.ActivityType;
 public class Main {
 	
 	public static JDA jda;
-	public static String token = "ODcxODUxNjUzNjQ3NzI4Njcy.YQhVIA.zOuDOBeUf9Y__caYcXC3htOj6ZU";
+	public static String token = "ODcxODUxNjUzNjQ3NzI4Njcy.YQhVIA.OYochv8Buc9-sh-VuW7SV-jMbrY";
 
 	public static void main(String[] args) throws LoginException {
 
