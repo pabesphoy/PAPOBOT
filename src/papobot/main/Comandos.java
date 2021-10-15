@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-
-import javax.swing.plaf.multi.MultiOptionPaneUI;
-
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -43,6 +40,12 @@ public class Comandos extends ListenerAdapter{
 					ejectuarClaim(event);break;
 				case "*bet":
 					ejecutarBet(event);break;
+				case "*music":
+					ejecutarMusic(event);break;
+				case "*chupamela":
+					ejecutarChupamela(event);break;
+				case "*sueño?":
+					ejecutarSueño(event);break;
 				default:
 					event.getChannel().sendMessage("Comando inválido: " + comando).queue();break;
 				}	
@@ -55,6 +58,27 @@ public class Comandos extends ListenerAdapter{
 	}
 	
 	
+	private void ejecutarSueño(GuildMessageReceivedEvent event) {
+		event.getChannel().sendMessage("Ser mi propio jefe").queue();
+		
+	}
+
+
+	private void ejecutarChupamela(GuildMessageReceivedEvent event) {
+		event.getChannel().sendMessage("Cuando tu quieras bb").queue();
+		
+	}
+
+
+	private void ejecutarMusic(GuildMessageReceivedEvent event) {
+		
+		/*
+		String playlist = "https://youtu.be/ZkUTJkkOnzw";
+		event.getChannel().sendMessage("_play " + playlist).queue();
+		*/
+	}
+
+
 	//COMANDOS
 	private void ejecutarBet(GuildMessageReceivedEvent event) throws IOException {
 		Integer dineroApostado = Integer.valueOf(event.getMessage().getContentRaw().split(" ")[1]);
